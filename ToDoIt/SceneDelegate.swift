@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let authSelectionViewController = AuthSelectionViewController()
-        window?.rootViewController = authSelectionViewController
+        let navigationViewController = UINavigationController(rootViewController: AuthSelectionViewController())
+        navigationViewController.navigationItem.backBarButtonItem?.tintColor = .black
+        window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
 
     }

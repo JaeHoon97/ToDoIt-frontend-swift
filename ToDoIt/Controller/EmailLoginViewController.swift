@@ -16,8 +16,6 @@ final class EmailLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "로그인"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         settingAddTargets()
     }
     
@@ -32,7 +30,8 @@ final class EmailLoginViewController: UIViewController {
     }
     
     @objc func signInButtonTapped() {
-        //present(SignInViewController(), animated: true)
+        let signInViewController = SignInViewController()
+        present(signInViewController, animated: true)
         
     }
     

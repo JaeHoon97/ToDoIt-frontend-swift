@@ -20,8 +20,14 @@ final class AuthSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ""
+        setupNavigation()
         settingAddTargets()
+    }
+    
+    private func setupNavigation() {
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
     private func settingAddTargets() {
@@ -46,8 +52,8 @@ final class AuthSelectionViewController: UIViewController {
     }
     
     @objc private func emailLoginButtonTapped() {
-        //navigationController?.pushViewController(LoginViewController(), animated: true)
-
+        let emailLoginViewController = EmailLoginViewController()
+        navigationController?.pushViewController(emailLoginViewController, animated: true)
     }
     
     @objc private func signinButtonTapped() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250157F12BFF773B00EDE4ED /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250157F02BFF773B00EDE4ED /* SignInView.swift */; };
+		250157F32BFF7B3700EDE4ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250157F22BFF7B3700EDE4ED /* SignInViewController.swift */; };
 		2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A84E2BFE820200B510A9 /* FontManager.swift */; };
 		2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8512BFE827600B510A9 /* UIButtonExtension.swift */; };
 		2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8542BFF262B00B510A9 /* AppColors.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250157F02BFF773B00EDE4ED /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		250157F22BFF7B3700EDE4ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2518A84E2BFE820200B510A9 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		2518A8512BFE827600B510A9 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		2518A8542BFF262B00B510A9 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			children = (
 				25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */,
 				25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */,
+				250157F22BFF7B3700EDE4ED /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			children = (
 				25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */,
 				25E4F4622BFE7DD100870129 /* EmailLoginView.swift */,
+				250157F02BFF773B00EDE4ED /* SignInView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 				25E4F4612BFE7DC800870129 /* AuthSelectionView.swift in Sources */,
 				2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */,
 				25A6C56C2BFE66E700B22DD1 /* ViewController.swift in Sources */,
+				250157F32BFF7B3700EDE4ED /* SignInViewController.swift in Sources */,
 				2518A8572BFF272F00B510A9 /* UITextFieldExtension.swift in Sources */,
+				250157F12BFF773B00EDE4ED /* SignInView.swift in Sources */,
 				25E4F45D2BFE7D6E00870129 /* AuthSelectionViewController.swift in Sources */,
 				2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */,
 				25A6C5682BFE66E700B22DD1 /* AppDelegate.swift in Sources */,
