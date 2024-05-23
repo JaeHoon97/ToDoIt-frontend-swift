@@ -7,24 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A84E2BFE820200B510A9 /* FontManager.swift */; };
+		2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8512BFE827600B510A9 /* UIButtonExtension.swift */; };
+		2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8542BFF262B00B510A9 /* AppColors.swift */; };
+		2518A8572BFF272F00B510A9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8562BFF272F00B510A9 /* UITextFieldExtension.swift */; };
 		25A6C5682BFE66E700B22DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C5672BFE66E700B22DD1 /* AppDelegate.swift */; };
 		25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */; };
 		25A6C56C2BFE66E700B22DD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C56B2BFE66E700B22DD1 /* ViewController.swift */; };
-		25A6C56F2BFE66E700B22DD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C56E2BFE66E700B22DD1 /* Base */; };
 		25A6C5712BFE66E800B22DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5702BFE66E800B22DD1 /* Assets.xcassets */; };
 		25A6C5742BFE66E800B22DD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5732BFE66E800B22DD1 /* Base */; };
+		25E4F45D2BFE7D6E00870129 /* AuthSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */; };
+		25E4F45F2BFE7D8300870129 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */; };
+		25E4F4612BFE7DC800870129 /* AuthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */; };
+		25E4F4632BFE7DD100870129 /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F4622BFE7DD100870129 /* EmailLoginView.swift */; };
+		25E4F4682BFE7F1800870129 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25E4F4672BFE7F1800870129 /* NanumGothicBold.otf */; };
+		25E4F46A2BFE7F1E00870129 /* NanumGothicExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25E4F4692BFE7F1E00870129 /* NanumGothicExtraBold.otf */; };
 		9217436B78632A3970F4EC5A /* Pods_ToDoIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4177CBE3F632AA5895305DB /* Pods_ToDoIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2518A84E2BFE820200B510A9 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		2518A8512BFE827600B510A9 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		2518A8542BFF262B00B510A9 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		2518A8562BFF272F00B510A9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		25A6C5642BFE66E700B22DD1 /* ToDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A6C5672BFE66E700B22DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25A6C56B2BFE66E700B22DD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		25A6C56E2BFE66E700B22DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25A6C5702BFE66E800B22DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25A6C5732BFE66E800B22DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25A6C5752BFE66E800B22DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionViewController.swift; sourceTree = "<group>"; };
+		25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionView.swift; sourceTree = "<group>"; };
+		25E4F4622BFE7DD100870129 /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		25E4F4672BFE7F1800870129 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
+		25E4F4692BFE7F1E00870129 /* NanumGothicExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicExtraBold.otf; sourceTree = "<group>"; };
 		3461275EEB0521E3264E0D10 /* Pods-ToDoIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoIt.release.xcconfig"; path = "Target Support Files/Pods-ToDoIt/Pods-ToDoIt.release.xcconfig"; sourceTree = "<group>"; };
 		F4177CBE3F632AA5895305DB /* Pods_ToDoIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9B147E80424035C3AB619A /* Pods-ToDoIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoIt.debug.xcconfig"; path = "Target Support Files/Pods-ToDoIt/Pods-ToDoIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +60,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2518A84D2BFE81EC00B510A9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2518A84E2BFE820200B510A9 /* FontManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2518A8502BFE824800B510A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2518A8512BFE827600B510A9 /* UIButtonExtension.swift */,
+				2518A8562BFF272F00B510A9 /* UITextFieldExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2518A8532BFF260600B510A9 /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				2518A8542BFF262B00B510A9 /* AppColors.swift */,
+			);
+			path = Convenience;
+			sourceTree = "<group>";
+		};
 		25A6C55B2BFE66E700B22DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +109,44 @@
 				25A6C5672BFE66E700B22DD1 /* AppDelegate.swift */,
 				25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */,
 				25A6C56B2BFE66E700B22DD1 /* ViewController.swift */,
-				25A6C56D2BFE66E700B22DD1 /* Main.storyboard */,
-				25A6C5702BFE66E800B22DD1 /* Assets.xcassets */,
+				2518A8532BFF260600B510A9 /* Convenience */,
+				25E4F4662BFE7E8F00870129 /* Fonts */,
+				2518A8502BFE824800B510A9 /* Extension */,
+				2518A84D2BFE81EC00B510A9 /* Manager */,
+				25E4F4652BFE7DE000870129 /* View */,
+				25E4F4642BFE7DD400870129 /* Controller */,
 				25A6C5722BFE66E800B22DD1 /* LaunchScreen.storyboard */,
+				25A6C5702BFE66E800B22DD1 /* Assets.xcassets */,
 				25A6C5752BFE66E800B22DD1 /* Info.plist */,
 			);
 			path = ToDoIt;
+			sourceTree = "<group>";
+		};
+		25E4F4642BFE7DD400870129 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */,
+				25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		25E4F4652BFE7DE000870129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */,
+				25E4F4622BFE7DD100870129 /* EmailLoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25E4F4662BFE7E8F00870129 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				25E4F4672BFE7F1800870129 /* NanumGothicBold.otf */,
+				25E4F4692BFE7F1E00870129 /* NanumGothicExtraBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5EC994B85671EF86AE0BBE8E /* Frameworks */ = {
@@ -88,7 +163,6 @@
 				FA9B147E80424035C3AB619A /* Pods-ToDoIt.debug.xcconfig */,
 				3461275EEB0521E3264E0D10 /* Pods-ToDoIt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +178,7 @@
 				25A6C5612BFE66E700B22DD1 /* Frameworks */,
 				25A6C5622BFE66E700B22DD1 /* Resources */,
 				FAAE5340DA4CBB5E50C77D03 /* [CP] Embed Pods Frameworks */,
+				14551B8DEF59D9CE83BE3752 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,15 +227,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E4F4682BFE7F1800870129 /* NanumGothicBold.otf in Resources */,
 				25A6C5712BFE66E800B22DD1 /* Assets.xcassets in Resources */,
 				25A6C5742BFE66E800B22DD1 /* Base in Resources */,
-				25A6C56F2BFE66E700B22DD1 /* Base in Resources */,
+				25E4F46A2BFE7F1E00870129 /* NanumGothicExtraBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14551B8DEF59D9CE83BE3752 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDoIt/Pods-ToDoIt-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDoIt/Pods-ToDoIt-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToDoIt/Pods-ToDoIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1818437CC6E91EA4927CE88A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,8 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E4F4632BFE7DD100870129 /* EmailLoginView.swift in Sources */,
+				25E4F45F2BFE7D8300870129 /* EmailLoginViewController.swift in Sources */,
+				25E4F4612BFE7DC800870129 /* AuthSelectionView.swift in Sources */,
+				2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */,
 				25A6C56C2BFE66E700B22DD1 /* ViewController.swift in Sources */,
+				2518A8572BFF272F00B510A9 /* UITextFieldExtension.swift in Sources */,
+				25E4F45D2BFE7D6E00870129 /* AuthSelectionViewController.swift in Sources */,
+				2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */,
 				25A6C5682BFE66E700B22DD1 /* AppDelegate.swift in Sources */,
+				2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */,
 				25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,14 +317,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		25A6C56D2BFE66E700B22DD1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				25A6C56E2BFE66E700B22DD1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		25A6C5722BFE66E800B22DD1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -272,7 +365,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -287,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -335,7 +428,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -344,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -367,7 +460,6 @@
 				INFOPLIST_FILE = ToDoIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -401,7 +493,6 @@
 				INFOPLIST_FILE = ToDoIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
