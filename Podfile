@@ -7,6 +7,7 @@ target 'ToDoIt' do
   pod 'SnapKit', '~> 5.7.0'
   pod 'Kingfisher', '~> 7.0'
   pod 'Alamofire'
+  pod 'KakaoSDK'
   # Pods for ToDoIt
 
 end
