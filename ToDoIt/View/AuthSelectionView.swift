@@ -70,7 +70,7 @@ final class AuthSelectionView: UIView {
         appLogoImageView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(70)
             make.centerX.equalToSuperview()
-            make.height.width.equalTo((150))
+            make.height.width.equalTo(150)
         }
         
         kakaoTalkImageView.snp.makeConstraints { make in
