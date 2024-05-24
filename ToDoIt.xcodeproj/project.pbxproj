@@ -13,6 +13,10 @@
 		2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8512BFE827600B510A9 /* UIButtonExtension.swift */; };
 		2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8542BFF262B00B510A9 /* AppColors.swift */; };
 		2518A8572BFF272F00B510A9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8562BFF272F00B510A9 /* UITextFieldExtension.swift */; };
+		2534DA2C2BFFC1510015B289 /* AccountFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534DA2B2BFFC1510015B289 /* AccountFinderView.swift */; };
+		2534DA2E2BFFC3F20015B289 /* EmailPasswordChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534DA2D2BFFC3F20015B289 /* EmailPasswordChoiceView.swift */; };
+		2534DA302BFFC7620015B289 /* AccountFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534DA2F2BFFC7620015B289 /* AccountFinderViewController.swift */; };
+		2534DA322BFFC8720015B289 /* EmailPasswordChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534DA312BFFC8720015B289 /* EmailPasswordChoiceViewController.swift */; };
 		25A6C5682BFE66E700B22DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C5672BFE66E700B22DD1 /* AppDelegate.swift */; };
 		25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */; };
 		25A6C56C2BFE66E700B22DD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C56B2BFE66E700B22DD1 /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 		2518A8512BFE827600B510A9 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		2518A8542BFF262B00B510A9 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		2518A8562BFF272F00B510A9 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		2534DA2B2BFFC1510015B289 /* AccountFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFinderView.swift; sourceTree = "<group>"; };
+		2534DA2D2BFFC3F20015B289 /* EmailPasswordChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordChoiceView.swift; sourceTree = "<group>"; };
+		2534DA2F2BFFC7620015B289 /* AccountFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFinderViewController.swift; sourceTree = "<group>"; };
+		2534DA312BFFC8720015B289 /* EmailPasswordChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordChoiceViewController.swift; sourceTree = "<group>"; };
 		25A6C5642BFE66E700B22DD1 /* ToDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A6C5672BFE66E700B22DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +139,8 @@
 			children = (
 				25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */,
 				25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */,
+				2534DA2F2BFFC7620015B289 /* AccountFinderViewController.swift */,
+				2534DA312BFFC8720015B289 /* EmailPasswordChoiceViewController.swift */,
 				250157F22BFF7B3700EDE4ED /* SignInViewController.swift */,
 			);
 			path = Controller;
@@ -141,6 +151,8 @@
 			children = (
 				25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */,
 				25E4F4622BFE7DD100870129 /* EmailLoginView.swift */,
+				2534DA2B2BFFC1510015B289 /* AccountFinderView.swift */,
+				2534DA2D2BFFC3F20015B289 /* EmailPasswordChoiceView.swift */,
 				250157F02BFF773B00EDE4ED /* SignInView.swift */,
 			);
 			path = View;
@@ -306,8 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2534DA302BFFC7620015B289 /* AccountFinderViewController.swift in Sources */,
 				25E4F4632BFE7DD100870129 /* EmailLoginView.swift in Sources */,
+				2534DA2E2BFFC3F20015B289 /* EmailPasswordChoiceView.swift in Sources */,
 				25E4F45F2BFE7D8300870129 /* EmailLoginViewController.swift in Sources */,
+				2534DA322BFFC8720015B289 /* EmailPasswordChoiceViewController.swift in Sources */,
 				25E4F4612BFE7DC800870129 /* AuthSelectionView.swift in Sources */,
 				2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */,
 				25A6C56C2BFE66E700B22DD1 /* ViewController.swift in Sources */,
@@ -316,6 +331,7 @@
 				250157F12BFF773B00EDE4ED /* SignInView.swift in Sources */,
 				25E4F45D2BFE7D6E00870129 /* AuthSelectionViewController.swift in Sources */,
 				2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */,
+				2534DA2C2BFFC1510015B289 /* AccountFinderView.swift in Sources */,
 				25A6C5682BFE66E700B22DD1 /* AppDelegate.swift in Sources */,
 				2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */,
 				25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */,

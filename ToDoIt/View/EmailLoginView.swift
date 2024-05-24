@@ -4,6 +4,7 @@
 //
 //  Created by 재훈 on 5/23/24.
 //
+// MARK: - 사용자가 가입한 이메일 계정으로 로그인을 시도하는 화면
 
 import UIKit
 import SnapKit

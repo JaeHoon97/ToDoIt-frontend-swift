@@ -4,8 +4,10 @@
 //
 //  Created by 재훈 on 5/23/24.
 //
+// MARK: - 사용자가 이메일로 계정을 생성하기 위한 화면
 
 import UIKit
+import SnapKit
 
 final class SignInView: UIView {
     
