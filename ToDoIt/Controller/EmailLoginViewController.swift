@@ -44,7 +44,7 @@ final class EmailLoginViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped() {
-        //(UIApplication.shared.connectedScenes.first?.delegate as? //SceneDelegate)?.changeRootViewController()
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController()
     }
     
     // MARK: - 키보드 내리기

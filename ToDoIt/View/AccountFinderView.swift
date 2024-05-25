@@ -16,7 +16,7 @@ final class AccountFinderView: UIView {
         bt.setTitle("이메일 찾기", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
         bt.backgroundColor = .clear
-        bt.setTitleColor(AppColors.shared.buttonTextColor, for: .normal)
+        bt.setTitleColor(.black, for: .normal)
         bt.titleLabel?.textAlignment = .center
         bt.clipsToBounds = false
         return bt
@@ -24,7 +24,7 @@ final class AccountFinderView: UIView {
     
     let emailUnderlineView: UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.8117647059, blue: 0.3647058824, alpha: 1)
+        view.backgroundColor = AppColors.shared.buttonBackGroundColor
         view.clipsToBounds = false
         return view
     }()
@@ -43,7 +43,7 @@ final class AccountFinderView: UIView {
         bt.setTitle("비밀번호 찾기", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
         bt.backgroundColor = .clear
-        bt.setTitleColor(.darkGray, for: .normal)
+        bt.setTitleColor(.black, for: .normal)
         bt.titleLabel?.textAlignment = .center
         bt.clipsToBounds = false
         return bt
@@ -79,7 +79,7 @@ final class AccountFinderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
         setupUI()
         setupLayout()
     }
