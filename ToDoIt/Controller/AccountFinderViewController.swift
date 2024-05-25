@@ -22,7 +22,7 @@ final class AccountFinderViewController: UIViewController {
     }
     
     private func setupNavigation() {
-        self.title = "이메일 / 비밀번호 찾기"
+        self.title = ""
     }
     
     private func settingAddTargets() {
@@ -31,19 +31,20 @@ final class AccountFinderViewController: UIViewController {
     }
     
     @objc private func idFinderButtonTapped() {
-        accountFinderView.emailFinderButton.setTitleColor(AppColors.shared.buttonTextColor, for: .normal)
-        accountFinderView.emailUnderlineView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.8117647059, blue: 0.3647058824, alpha: 1)
-        accountFinderView.pwFinderButton.setTitleColor(.darkGray, for: .normal)
-        accountFinderView.pwUnderlineView.backgroundColor = .darkGray
-        accountFinderView.emailPasswordChoiceView.checkMainText = 0
+        UIView.animate(withDuration: 0.3) {
+            self.accountFinderView.emailUnderlineView.backgroundColor = AppColors.shared.buttonBackGroundColor
+            self.accountFinderView.pwUnderlineView.backgroundColor = .darkGray
+            self.accountFinderView.emailPasswordChoiceView.checkMainText = 0
+        }
     }
     
     @objc private func pwFinderButtonTapped() {
-        accountFinderView.emailFinderButton.setTitleColor(.darkGray, for: .normal)
-        accountFinderView.emailUnderlineView.backgroundColor = .darkGray
-        accountFinderView.pwFinderButton.setTitleColor(AppColors.shared.buttonTextColor, for: .normal)
-        accountFinderView.pwUnderlineView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.8117647059, blue: 0.3647058824, alpha: 1)
-        accountFinderView.emailPasswordChoiceView.checkMainText = 1
+        UIView.animate(withDuration: 0.3) {
+            self.accountFinderView.emailUnderlineView.backgroundColor = .darkGray
+            self.accountFinderView.pwUnderlineView.backgroundColor = AppColors.shared.buttonBackGroundColor
+            self.accountFinderView.emailPasswordChoiceView.checkMainText = 1
+        }
+
     }
     // MARK: - 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -14,7 +14,7 @@ final class EmailPasswordChoiceView: UIView {
     var mainLabel: UILabel = {
         let lb = UILabel()
         lb.text = "닉네임"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -23,12 +23,12 @@ final class EmailPasswordChoiceView: UIView {
     var mainTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "닉네임을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -42,7 +42,7 @@ final class EmailPasswordChoiceView: UIView {
     private let tellLabel: UILabel = {
         let lb = UILabel()
         lb.text = "전화번호"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -51,12 +51,12 @@ final class EmailPasswordChoiceView: UIView {
     private let tellTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "전화번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -95,7 +95,7 @@ final class EmailPasswordChoiceView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
         setupUI()
         setupLayout()
     }

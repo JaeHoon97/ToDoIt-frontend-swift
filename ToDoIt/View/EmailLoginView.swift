@@ -24,12 +24,12 @@ final class EmailLoginView: UIView {
     lazy var emailTextField: UITextField = { // 이메일 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -43,12 +43,12 @@ final class EmailLoginView: UIView {
     lazy var passwordTextField: UITextField = { // 비밀번호 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .default
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -118,7 +118,7 @@ final class EmailLoginView: UIView {
     // MARK: - 로그인 뷰 초기화
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
         setupUI()
         setupLayout()
     }
