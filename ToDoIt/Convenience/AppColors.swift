@@ -23,6 +23,9 @@ final class AppColors {
     let mainBackGroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 1, alpha: 1)
     
     let tabBarBackGroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 1, alpha: 1)
+    
+    let fsCalendarweekdayTextColor = #colorLiteral(red: 0.3921568627, green: 0.5843137255, blue: 0.9294117647, alpha: 1)
+    let fsCalendarTitleWeekendColor = #colorLiteral(red: 0.9568627451, green: 0.3764705882, blue: 0.3764705882, alpha: 1)
     // #colorLiteral(red: 0.5843137255, green: 0.7411764706, blue: 1, alpha: 1)
     // #colorLiteral(red: 0.6666666667, green: 0.768627451, blue: 1, alpha: 1)
 }
