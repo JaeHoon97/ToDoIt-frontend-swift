@@ -8,6 +8,7 @@ target 'ToDoIt' do
   pod 'Kingfisher', '~> 7.0'
   pod 'Alamofire'
   pod 'KakaoSDK'
+  pod 'FSCalendar'
   # Pods for ToDoIt
 
 end

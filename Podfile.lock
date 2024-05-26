@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.9.1)
+  - FSCalendar (2.8.4)
   - KakaoSDK (2.22.2):
     - KakaoSDKAuth (= 2.22.2)
     - KakaoSDKCert (= 2.22.2)
@@ -44,6 +45,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FSCalendar
   - KakaoSDK
   - Kingfisher (~> 7.0)
   - SnapKit (~> 5.7.0)
@@ -51,6 +53,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FSCalendar
     - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCert
@@ -68,6 +71,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   KakaoSDK: c7ca0c86ca6c3bacafa7798171acc1ce208e5a1b
   KakaoSDKAuth: 6a4c46f84c772a19f24121d7f5a42aa861ebc0e7
   KakaoSDKCert: f17f945a439a6281ab504c8b5ef08e02e00ff082
@@ -83,6 +87,6 @@ SPEC CHECKSUMS:
   Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 0d9e24fa1a09d3e4305fd19b62bf75875796c028
+PODFILE CHECKSUM: 394d9b4968cc92a446ddef9f981f672c209d4164
 
 COCOAPODS: 1.15.2

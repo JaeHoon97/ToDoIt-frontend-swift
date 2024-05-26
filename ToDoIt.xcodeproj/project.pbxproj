@@ -29,6 +29,8 @@
 		25DA40242C0215F200B7F59E /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA40232C0215F200B7F59E /* UserInfoViewController.swift */; };
 		25DA40262C02160300B7F59E /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA40252C02160300B7F59E /* UserInfoView.swift */; };
 		25DA40282C02217400B7F59E /* AppTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA40272C02217400B7F59E /* AppTexts.swift */; };
+		25DA402A2C03435400B7F59E /* EventSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA40292C03435400B7F59E /* EventSummaryView.swift */; };
+		25DA402C2C0344A400B7F59E /* EventSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA402B2C0344A400B7F59E /* EventSummaryViewController.swift */; };
 		25E4F45D2BFE7D6E00870129 /* AuthSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */; };
 		25E4F45F2BFE7D8300870129 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */; };
 		25E4F4612BFE7DC800870129 /* AuthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */; };
@@ -63,6 +65,8 @@
 		25DA40232C0215F200B7F59E /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		25DA40252C02160300B7F59E /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		25DA40272C02217400B7F59E /* AppTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTexts.swift; sourceTree = "<group>"; };
+		25DA40292C03435400B7F59E /* EventSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSummaryView.swift; sourceTree = "<group>"; };
+		25DA402B2C0344A400B7F59E /* EventSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSummaryViewController.swift; sourceTree = "<group>"; };
 		25E4F45C2BFE7D6E00870129 /* AuthSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionViewController.swift; sourceTree = "<group>"; };
 		25E4F45E2BFE7D8300870129 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		25E4F4602BFE7DC800870129 /* AuthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				250157F22BFF7B3700EDE4ED /* SignInViewController.swift */,
 				25DA401B2C02151900B7F59E /* HomeViewController.swift */,
 				25DA401F2C02156D00B7F59E /* ScheduleViewController.swift */,
+				25DA402B2C0344A400B7F59E /* EventSummaryViewController.swift */,
 				25DA40232C0215F200B7F59E /* UserInfoViewController.swift */,
 			);
 			path = Controller;
@@ -174,6 +179,7 @@
 				250157F02BFF773B00EDE4ED /* SignInView.swift */,
 				25DA401D2C02153F00B7F59E /* HomeView.swift */,
 				25DA40212C02157D00B7F59E /* ScheduleView.swift */,
+				25DA40292C03435400B7F59E /* EventSummaryView.swift */,
 				25DA40252C02160300B7F59E /* UserInfoView.swift */,
 			);
 			path = View;
@@ -341,6 +347,7 @@
 			files = (
 				25DA40262C02160300B7F59E /* UserInfoView.swift in Sources */,
 				2534DA302BFFC7620015B289 /* AccountFinderViewController.swift in Sources */,
+				25DA402A2C03435400B7F59E /* EventSummaryView.swift in Sources */,
 				25DA40282C02217400B7F59E /* AppTexts.swift in Sources */,
 				25E4F4632BFE7DD100870129 /* EmailLoginView.swift in Sources */,
 				2534DA2E2BFFC3F20015B289 /* EmailPasswordChoiceView.swift in Sources */,
@@ -362,6 +369,7 @@
 				25DA40222C02157D00B7F59E /* ScheduleView.swift in Sources */,
 				2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */,
 				25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */,
+				25DA402C2C0344A400B7F59E /* EventSummaryViewController.swift in Sources */,
 				25DA401E2C02153F00B7F59E /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
