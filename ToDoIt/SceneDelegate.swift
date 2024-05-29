@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationViewController = UINavigationController(rootViewController: AuthSelectionViewController())
         navigationViewController.navigationItem.backBarButtonItem?.tintColor = .black
         window?.rootViewController = navigationViewController
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
 
     }

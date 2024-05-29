@@ -66,6 +66,10 @@ extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     
     // MARK: - 날짜를 선택했을 때
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        // 사용자가 날짜를 클릭했을 때 진동 발생
+        Haptics.Shared.generateLightHaptics()
+        
         let selectedDate = dateFormatter.string(from: date)
         print(selectedDate)
         let eventSummaryViewController = EventSummaryViewController()

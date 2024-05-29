@@ -157,7 +157,6 @@ final class SignInView: UIView {
         bt.setTitle("계정 생성하기", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
-        bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .white
         bt.clipsToBounds = false
         bt.layer.cornerRadius = 10
