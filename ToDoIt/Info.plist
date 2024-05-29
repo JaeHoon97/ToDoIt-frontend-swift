@@ -17,6 +17,7 @@
 	<array>
 		<string>NanumGothicBold.otf</string>
 		<string>NanumGothicExtraBold.otf</string>
+		<string>NanumGothic.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

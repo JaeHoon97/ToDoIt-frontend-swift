@@ -94,7 +94,6 @@ final class EmailLoginView: UIView {
         bt.setTitle("계정을 잃어버렸나요?", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
         bt.backgroundColor = .clear
-        bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .black
         bt.clipsToBounds = true
         bt.contentHorizontalAlignment = .left
@@ -107,7 +106,6 @@ final class EmailLoginView: UIView {
         bt.setTitle("회원가입", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
         bt.backgroundColor = .clear
-        bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .black
         bt.clipsToBounds = true
         bt.contentHorizontalAlignment = .right
