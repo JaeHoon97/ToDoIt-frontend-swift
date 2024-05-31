@@ -69,7 +69,8 @@ final class AuthSelectionViewController: UIViewController {
                 } else {
                     print("카카오톡 앱으로 로그인 성공")
                     
-                    _ = oauthToken
+                    guard let token = oauthToken?.accessToken else { return }
+                    print("서버로 전달할 토큰은 \(token)입니다")
                     self.setUserInfo()
                 }
             }
@@ -79,7 +80,6 @@ final class AuthSelectionViewController: UIViewController {
                     print(error)
                 } else {
                     print("카카오톡 계정으로 로그인 성공")
-                    
                     _ = oauthToken
                     self.setUserInfo()
                 }
