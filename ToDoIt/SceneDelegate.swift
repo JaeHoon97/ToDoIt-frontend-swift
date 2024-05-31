@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationViewController = UINavigationController(rootViewController: AuthSelectionViewController())
         navigationViewController.navigationItem.backBarButtonItem?.tintColor = .black
         window?.rootViewController = navigationViewController
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
 
     }
@@ -32,6 +33,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
+    
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -60,7 +63,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    func changeRootViewController() { // 사용자가 로그인에 성공할 경우 루트 뷰 컨트롤러를 변경해주는 함수
+        guard let window = self.window else { return }
+        
+        let tabBarController = UITabBarController() // 탭 바 컨트롤러
+        
+        // 각 화면에 맞는 뷰 컨트롤러를 생성한 후, 네비게이션 컨트롤러의 루트 뷰 컨트롤러로 지정한다
+        let homeViewController =  HomeViewController()
+        let schedulerViewController = ScheduleViewController()
+        let userInfoViewController = UserInfoViewController()
+        
+        tabBarController.setViewControllers([homeViewController, schedulerViewController, userInfoViewController], animated: false)
+        tabBarController.modalPresentationStyle = .fullScreen // 화면을 풀스크린으로 변경
+        tabBarController.tabBar.backgroundColor = AppColors.shared.tabBarBackGroundColor
+        tabBarController.tabBar.tintColor = .black
+        
+        let attributes = [NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 10)]
+        UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+        
+        guard let tabItems = tabBarController.tabBar.items else { return }
+        
+        tabItems[0].image = UIImage(named: "HomeIcon")
+        tabItems[1].image = UIImage(named: "CalendarIcon")
+        tabItems[2].image = UIImage(named: "UserIcon")
+        
+        window.rootViewController = tabBarController // 루트 뷰 컨트롤러를 메인 탭 바 컨트롤러로 변경
+        
+        UIView.transition(with: window, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        window.makeKeyAndVisible()
+    }
+    
 }
 

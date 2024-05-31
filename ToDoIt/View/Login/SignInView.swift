@@ -14,8 +14,9 @@ final class SignInView: UIView {
     private let mainTitleLabel: UILabel = {
         let lb = UILabel()
         lb.text = "회원가입"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 17)
         lb.textColor = .black
+        lb.textAlignment = .center
         lb.clipsToBounds = true
         return lb
     }()
@@ -23,7 +24,7 @@ final class SignInView: UIView {
     private let emailLabel: UILabel = {
         let lb = UILabel()
         lb.text = "이메일"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -32,12 +33,12 @@ final class SignInView: UIView {
     private let emailTextField: UITextField = { // 이메일 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -51,7 +52,7 @@ final class SignInView: UIView {
     private let nicknameLabel: UILabel = {
         let lb = UILabel()
         lb.text = "닉네임"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -60,12 +61,12 @@ final class SignInView: UIView {
     private let nicknameTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "닉네임을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -79,7 +80,7 @@ final class SignInView: UIView {
     private let tellLabel: UILabel = {
         let lb = UILabel()
         lb.text = "전화번호"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -88,12 +89,12 @@ final class SignInView: UIView {
     private let tellTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "전화번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -107,7 +108,7 @@ final class SignInView: UIView {
     private let passwordLabel: UILabel = {
         let lb = UILabel()
         lb.text = "비밀번호"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 20)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -116,12 +117,12 @@ final class SignInView: UIView {
     private let passwordTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -134,12 +135,12 @@ final class SignInView: UIView {
     private let passwordCheckTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 재입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 12)
+        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
-        tf.layer.borderWidth = 1
+        tf.layer.borderWidth = AppTexts.shared.TextFieldBorderWidth
         tf.clipsToBounds = true
         tf.keyboardType = .emailAddress
         tf.autocapitalizationType = .none // 자동 대문자 비활성화
@@ -156,7 +157,6 @@ final class SignInView: UIView {
         bt.setTitle("계정 생성하기", for: .normal)
         bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
-        bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .white
         bt.clipsToBounds = false
         bt.layer.cornerRadius = 10
@@ -165,7 +165,7 @@ final class SignInView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
         setupUI()
         setupLayout()
     }
@@ -187,7 +187,7 @@ final class SignInView: UIView {
         mainTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(40)
             make.centerX.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(20)
             make.width.equalTo(80)
         }
         
@@ -196,7 +196,7 @@ final class SignInView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.centerX.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(20)
         }
         
         emailTextField.snp.makeConstraints { make in
@@ -212,7 +212,7 @@ final class SignInView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.centerX.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(20)
         }
         
         passwordTextField.snp.makeConstraints { make in
@@ -236,7 +236,7 @@ final class SignInView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.centerX.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(20)
         }
         
         nicknameTextField.snp.makeConstraints { make in
@@ -252,7 +252,7 @@ final class SignInView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().inset(20)
             make.centerX.equalToSuperview()
-            make.height.equalTo(25)
+            make.height.equalTo(20)
         }
         
         tellTextField.snp.makeConstraints { make in
