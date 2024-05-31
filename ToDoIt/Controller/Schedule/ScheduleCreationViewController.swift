@@ -13,6 +13,8 @@ final class ScheduleCreationViewController: UIViewController {
     private let scheduleCreationView = ScheduleCreationView()
     private let scrollView = UIScrollView()
     
+    var delegate: SendScheduleData?
+    
     // MARK: - 뷰 디드 로드
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,10 +109,12 @@ final class ScheduleCreationViewController: UIViewController {
             scheduleCreationView.scheduleTitleTextField.text!,
             startDate,
             endDate,
-            scheduleCreationView.allDaySwitch.isOn,
             scheduleCreationView.colorView.backgroundColor!,
+            scheduleCreationView.allDaySwitch.isOn,
             scheduleCreationView.memoTextView.text!
+            
         )
+        delegate?.SendScheduleData(title: scheduleCreationView.scheduleTitleTextField.text!)
         dismiss(animated: true)
     }
     
@@ -173,4 +177,8 @@ extension ScheduleCreationViewController: UIScrollViewDelegate {
         }
         self.view.endEditing(true)
     }
+}
+
+protocol SendScheduleData {
+    func SendScheduleData(title: String)
 }

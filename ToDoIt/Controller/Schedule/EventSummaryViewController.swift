@@ -58,6 +58,7 @@ final class EventSummaryViewController: UIViewController {
     @objc private func createEventButtonTapped() {
         Haptics.Shared.generateLightHaptics()
         let scheduleCreationViewController = ScheduleCreationViewController()
+        scheduleCreationViewController.delegate = self
         present(scheduleCreationViewController, animated: true)
     }
     
@@ -80,3 +81,14 @@ extension EventSummaryViewController: UITableViewDelegate {
     }
     
 }
+
+extension EventSummaryViewController: SendScheduleData {
+    func SendScheduleData(title: String) {
+        eventSummaryView.personalSchedules.insert(Schedule(mainTitle: title), at: 0)
+        eventSummaryView.snapshot = NSDiffableDataSourceSnapshot<Section, Schedule>()
+        eventSummaryView.snapshot.appendSections([.main])
+        eventSummaryView.snapshot.appendItems(eventSummaryView.personalSchedules, toSection: .main)
+        eventSummaryView.dataSource.apply(eventSummaryView.snapshot, animatingDifferences: true)
+    }
+}
+

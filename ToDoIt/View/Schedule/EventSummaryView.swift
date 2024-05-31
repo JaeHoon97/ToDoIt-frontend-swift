@@ -85,6 +85,7 @@ final class EventSummaryView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     private func setupUI() {
         [contentView].forEach {
             self.addSubview($0)
