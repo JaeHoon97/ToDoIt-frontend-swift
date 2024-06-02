@@ -17,7 +17,7 @@ final class ScheduleViewController: UIViewController {
     
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd-E"
+        df.dateFormat = "MM월 dd일 (E)"
         df.locale = Locale(identifier: "ko_KR")
         return df
     }()

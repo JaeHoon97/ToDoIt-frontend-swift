@@ -13,7 +13,7 @@ final class ScheduleTableViewCell: UITableViewCell {
     
     var mainColorView: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColors.shared.buttonBackGroundColor
+        view.backgroundColor = AppColors.shared.tableViewCellMainColor
         view.clipsToBounds = true
         return view
     }()
