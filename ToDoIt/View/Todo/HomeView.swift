@@ -12,117 +12,53 @@ import SnapKit
 
 final class HomeView: UIView {
     
-    // MARK: - 대쉬보드 뷰
-    private let dashBoardView: UIView = {
+    private let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.backgroundColor = .systemPink
+        sv.alwaysBounceVertical = true // 스크롤 뷰의 높이보다 컨텐츠의 높이가 더 작을 경우에도 스크롤 효과를 보여주게 설정
+        sv.showsVerticalScrollIndicator = false
+        return sv
+    }()
+    
+    // MARK: - 사용자에게 todo 관련 메시지, 진행률, 막대그래프를 담고있는 View
+    private let todoInfoView: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColors.shared.dashboardBackGroundColor
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 10
         view.clipsToBounds = true
         return view
     }()
     
-    // MARK: - 대쉬보드 뷰 안에 있는 스택 뷰
-    private lazy var dashBoardStackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [dateLabel, dataStackView, progressView])
-        sv.axis = .vertical
+    // MARK: - 총 일정 수, 완료 일정 수, 진행률을 담기 위한 수평 스택 View
+    private lazy var progressStackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [toDoMessageLabel, toDoPercentLabel])
+        sv.axis = .horizontal
         sv.distribution = .fill
         sv.alignment = .fill
-        sv.spacing = 10
+        sv.spacing = 5
         sv.backgroundColor = .clear
         return sv
     }()
     
-    // MARK: - 오늘 날짜를 표시
-    private let dateLabel: UILabel = {
+    // MARK: - todo 안내 메시지 전달 Label
+    private let toDoMessageLabel: UILabel = {
         let lb = UILabel()
-        lb.text = "05월 31일 수"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 23)
-        lb.textColor = .white
-        lb.numberOfLines = 0
+        lb.text = "오늘의 ToDo를 달성해보세요!"
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 14)
+        lb.textColor = AppColors.shared.labelTextColor
+        lb.numberOfLines = 1
         lb.textAlignment = .left
         lb.backgroundColor = .clear
         lb.frame.size = lb.intrinsicContentSize
         return lb
     }()
     
-    
-    // MARK: - ToDo의 진행률을 막대그래프로 표시
-    private let progressView: UIProgressView = {
-        let pv = UIProgressView(progressViewStyle: .bar)
-        pv.trackTintColor = AppColors.shared.mainBackGroundColor
-        pv.progressTintColor = AppColors.shared.buttonBackGroundColor
-        pv.progress = 0.4
-        return pv
-    }()
-    
-    // MARK: - 총 일정 수, 완료 일정 수, 진행률을 담기 위한 수평 스택 뷰
-    private lazy var dataStackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [totalLabel, totalScoreLabel, doneLabel, doneScoreLabel, percentLabel])
-        sv.axis = .horizontal
-        sv.distribution = .fillEqually
-        sv.alignment = .fill
-        sv.spacing = 10
-        sv.backgroundColor = .clear
-        return sv
-    }()
-    
-    // MARK: - "전체" 표시
-    private let totalLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "전체"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
-        lb.textColor = .white
-        lb.numberOfLines = 0
-        lb.textAlignment = .left
-        lb.backgroundColor = .clear
-        lb.frame.size = lb.intrinsicContentSize
-        return lb
-    }()
-    
-    // MARK: - 오늘 날짜에 해당하는 총 일정 수
-    private let totalScoreLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "10"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 15)
-        lb.textColor = .white
-        lb.numberOfLines = 0
-        lb.textAlignment = .left
-        lb.backgroundColor = .clear
-        lb.frame.size = lb.intrinsicContentSize
-        return lb
-    }()
-    
-    // MARK: - "완료" 표시
-    private let doneLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "완료"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
-        lb.textColor = .white
-        lb.numberOfLines = 0
-        lb.textAlignment = .left
-        lb.backgroundColor = .clear
-        lb.frame.size = lb.intrinsicContentSize
-        return lb
-    }()
-    
-    // MARK: - 오늘 날짜에 해당하는 완료된 일정 수
-    private let doneScoreLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "4"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 15)
-        lb.textColor = .white
-        lb.numberOfLines = 0
-        lb.textAlignment = .left
-        lb.backgroundColor = .clear
-        lb.frame.size = lb.intrinsicContentSize
-        return lb
-    }()
-    
-    // MARK: - 완료된 일정 수 / 전체 일정 수 값을 퍼센트로 표시
-    private let percentLabel: UILabel = {
+    // MARK: - 완료된 일정 수 / 전체 일정 수 값을 퍼센트로 표시 Label
+    private let toDoPercentLabel: UILabel = {
         let lb = UILabel()
         lb.text = "44%"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 15)
-        lb.textColor = .white
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 20)
+        lb.textColor = AppColors.shared.labelTextColor
         lb.numberOfLines = 0
         lb.textAlignment = .right
         lb.backgroundColor = .clear
@@ -130,59 +66,160 @@ final class HomeView: UIView {
         return lb
     }()
     
-    // MARK: - 오늘 날짜를 변환해주고 변환된 날짜를 dateLabel에 세팅
-    private let dateFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.dateFormat = "MM월 dd일 (E)"
-        df.locale = Locale(identifier: "ko_KR")
-        return df
+    // MARK: - ToDo의 진행률 progressView
+    private let toDoProgressView: UIProgressView = {
+        let pv = UIProgressView(progressViewStyle: .bar)
+        pv.trackTintColor = AppColors.shared.mainBackGroundColor
+        pv.progressTintColor = AppColors.shared.buttonBackGroundColor
+        pv.progress = 0.4
+        return pv
     }()
-
+    
+    // MARK: - Todo를 생성하는 버튼과, 생성된 ToDo들을 담고있는 View
+    private let todoListView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    // MARK: - ToDo를 생성하는 버튼
+    let createToDoButton: UIButton = {
+        let bt = UIButton(type: .custom)
+        bt.setTitle("+ ToDo를 생성하세요", for: .normal)
+        bt.setTitleColor(.white, for: .normal)
+        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 14)
+        bt.backgroundColor = AppColors.shared.buttonBackGroundColor
+        bt.clipsToBounds = true
+        bt.layer.cornerRadius = 10
+        return bt
+    }()
+    
+    // MARK: - ToDo 리스트를 보여주기 위한 테이블 뷰
+    let toDoTableView: UITableView = {
+        let tv = UITableView(frame: .zero, style: .plain)
+        tv.register(ToDoTableViewCell.self, forCellReuseIdentifier: ToDoTableViewCell.ID)
+        tv.separatorStyle = .none
+        tv.backgroundColor = .clear
+        tv.isScrollEnabled = false
+        tv.clipsToBounds = true
+        return tv
+    }()
+    
+    var dataSource: UITableViewDiffableDataSource<Section, ToDo>!
+    
+    var snapshot: NSDiffableDataSourceSnapshot<Section, ToDo>!
+    
+    var toDoList: [ToDo] = [
+        ToDo(mainTitle: "컴퓨터 구조 공부하기"),
+        ToDo(mainTitle: "알고리즘 문제 풀기"),
+        ToDo(mainTitle: "일요일 8시 홍대 1번 출구"),
+        ToDo(mainTitle: "스터디 모임 수요일 6시"),
+    ]
+    
+    // MARK: - 초기화
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
         setupLayout()
+        setupDataSourceAndSnapShot()
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
-    private func setupUI() {
-        self.backgroundColor = AppColors.shared.mainBackGroundColor
-        dateLabel.text = dateFormatter.string(from: Date())
+    private func setupDataSourceAndSnapShot() {
+        dataSource = UITableViewDiffableDataSource<Section, ToDo>(tableView: self.toDoTableView, cellProvider: { tableView, indexPath, itemIdentifier in
+            let cell = tableView.dequeueReusableCell(withIdentifier: ToDoTableViewCell.ID, for: indexPath) as! ToDoTableViewCell
+            cell.mainText.text = self.toDoList[indexPath.row].mainTitle
+            cell.selectionStyle = .none
+            return cell
+        })
         
-        [dashBoardView].forEach {
-            addSubview($0)
-        }
-        
-        [dashBoardStackView].forEach {
-            dashBoardView.addSubview($0)
-        }
-        
+        snapshot = NSDiffableDataSourceSnapshot<Section, ToDo>()
+        snapshot.appendSections([.todo])
+        snapshot.appendItems(toDoList, toSection: .todo)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
     
-    private func setupLayout() {
-        dashBoardView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.25)
+    // UI
+    private func setupUI() {
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
+        
+        [scrollView].forEach {
+            self.addSubview($0)
         }
         
-        dashBoardStackView.snp.makeConstraints { make in
+        [todoInfoView, todoListView].forEach {
+            self.scrollView.addSubview($0)
+        }
+        
+        [progressStackView, toDoProgressView].forEach {
+            self.todoInfoView.addSubview($0)
+        }
+        
+        [toDoTableView, createToDoButton].forEach {
+            self.todoListView.addSubview($0)
+        }
+    }
+    
+    
+    // Layout
+    private func setupLayout() {
+        scrollView.snp.makeConstraints { make in
+            make.top.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        todoInfoView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(dashBoardView.safeAreaLayoutGuide.snp.top).offset(10)
+            make.top.equalToSuperview().offset(30)
             make.leading.equalToSuperview().offset(30)
             make.trailing.equalToSuperview().offset(-30)
-            make.bottom.equalToSuperview().offset(-30)
+            make.height.equalTo(100)
         }
         
-        progressView.snp.makeConstraints { make in
+        progressStackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+        
+        toDoProgressView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(5)
         }
         
+        todoListView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(todoInfoView.snp.bottom).offset(30)
+            make.leading.equalToSuperview().offset(30)
+            make.trailing.equalToSuperview().offset(-30)
+            make.height.equalTo(300)
+        }
+        
+        toDoTableView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+        }
+        
+        createToDoButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(toDoTableView.snp.bottom).offset(20)
+            make.bottom.equalToSuperview().offset(-20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.height.equalTo(40)
+        }
     }
     
-
 }
+
+

@@ -80,18 +80,16 @@ extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     
     // MARK: - 등록된 이벤트의 날짜들을 이벤트 점으로 표시
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        let eventDate = dateFormatter.string(from: date) // Date를 String로 변환하고
-        
-        if self.eventsArray.contains(eventDate) { // 이벤트 배열에 사용자의 이벤트가 포함되어 있으면
-            return 1
-        }
-        
-        return 0
+
+        return 5
     }
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let eventScaleFactor: CGFloat = 0.8
+        cell.eventIndicator.transform = CGAffineTransform(scaleX: eventScaleFactor, y: eventScaleFactor) // 이벤트 표시 작은 원 사이즈
         cell.layer.borderColor = UIColor.clear.cgColor
     }
+
     
     
 }

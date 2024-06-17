@@ -78,7 +78,7 @@ final class EventSummaryView: UIView {
         super.init(frame: frame)
         setupUI()
         setupLayout()
-        setupDataSource()
+        setupDataSourceAndSnapShot()
     }
     
     required init?(coder: NSCoder) {
@@ -103,7 +103,7 @@ final class EventSummaryView: UIView {
         self.layer.cornerRadius = 25
     }
     
-    private func setupDataSource() {
+    private func setupDataSourceAndSnapShot() {
         dataSource = UITableViewDiffableDataSource<Section, Schedule>(tableView: self.eventTableView, cellProvider: { tableView, indexPath, itemIdentifier in
             let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.ID, for: indexPath) as! ScheduleTableViewCell
             cell.mainText.text = itemIdentifier.mainTitle
@@ -112,8 +112,8 @@ final class EventSummaryView: UIView {
         })
         
         snapshot = NSDiffableDataSourceSnapshot<Section, Schedule>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(personalSchedules, toSection: .main)
+        snapshot.appendSections([.schedule])
+        snapshot.appendItems(personalSchedules, toSection: .schedule)
         dataSource.apply(snapshot)
         
     }

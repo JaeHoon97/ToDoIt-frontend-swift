@@ -1,15 +1,16 @@
 //
-//  PersonalScheduleTableViewCell.swift
+//  ToDoTableViewCell.swift
 //  ToDoIt
 //
-//  Created by 재훈 on 5/29/24.
+//  Created by 재훈 on 6/3/24.
 //
-// MARK: - 사용자의 Schedule TableView에 들어가는 ScheduleCell
+// MARK: - 사용자의 ToDo TableView에 들어가는 ToDoCell
+
 import UIKit
 import SnapKit
 
-final class ScheduleTableViewCell: UITableViewCell {
-    static let ID = "ScheduleTableViewCell"
+final class ToDoTableViewCell: UITableViewCell {
+    static let ID = "ToDoTableViewCell"
     
     var mainColorView: UIView = {
         let view = UIView()
@@ -20,9 +21,9 @@ final class ScheduleTableViewCell: UITableViewCell {
     
     var mainText: UILabel = {
         let lb = UILabel()
-        lb.font = UIFont(name: FontManager.NanumGothic, size: 13)
+        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 13)
         lb.textAlignment = .left
-        lb.textColor = .black
+        lb.textColor = AppColors.shared.labelTextColor
         lb.backgroundColor = .clear
         return lb
     }()
@@ -46,7 +47,7 @@ final class ScheduleTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0))
+        self.contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0))
     }
     
     private func setupUI() {
@@ -55,8 +56,8 @@ final class ScheduleTableViewCell: UITableViewCell {
         }
         
         self.backgroundColor = .clear
-        self.contentView.backgroundColor = AppColors.shared.tableViewCellBackGroundColor
-        self.contentView.layer.cornerRadius = 7
+        self.contentView.backgroundColor = .white
+        self.contentView.layer.cornerRadius = 5
         self.contentView.layer.masksToBounds = true
     }
     
@@ -82,3 +83,4 @@ final class ScheduleTableViewCell: UITableViewCell {
     
     
 }
+

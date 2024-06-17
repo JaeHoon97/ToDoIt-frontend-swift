@@ -27,6 +27,7 @@
 		25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A6C5692BFE66E700B22DD1 /* SceneDelegate.swift */; };
 		25A6C5712BFE66E800B22DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5702BFE66E800B22DD1 /* Assets.xcassets */; };
 		25A6C5742BFE66E800B22DD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5732BFE66E800B22DD1 /* Base */; };
+		25AA73C72C0DB7140045296D /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AA73C62C0DB7140045296D /* ToDoTableViewCell.swift */; };
 		25DA401C2C02151900B7F59E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401B2C02151900B7F59E /* HomeViewController.swift */; };
 		25DA401E2C02153F00B7F59E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401D2C02153F00B7F59E /* HomeView.swift */; };
 		25DA40202C02156D00B7F59E /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401F2C02156D00B7F59E /* ScheduleViewController.swift */; };
@@ -68,6 +69,7 @@
 		25A6C5702BFE66E800B22DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25A6C5732BFE66E800B22DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25A6C5752BFE66E800B22DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25AA73C62C0DB7140045296D /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		25DA401B2C02151900B7F59E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		25DA401D2C02153F00B7F59E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		25DA401F2C02156D00B7F59E /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -130,23 +132,16 @@
 		259E11B92C063A28008A6A8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				259E11BA2C063B92008A6A8B /* SchduleModel */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		259E11BA2C063B92008A6A8B /* SchduleModel */ = {
-			isa = PBXGroup;
-			children = (
 				259E11BB2C063BCF008A6A8B /* Model.swift */,
 			);
-			path = SchduleModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		259E11BD2C064B13008A6A8B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				259E11BE2C064B53008A6A8B /* ScheduleTableViewCell.swift */,
+				25AA73C62C0DB7140045296D /* ToDoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -475,6 +470,7 @@
 				259E11BF2C064B53008A6A8B /* ScheduleTableViewCell.swift in Sources */,
 				25DA40222C02157D00B7F59E /* ScheduleView.swift in Sources */,
 				259E11CD2C071976008A6A8B /* ScheduleCreationViewController.swift in Sources */,
+				25AA73C72C0DB7140045296D /* ToDoTableViewCell.swift in Sources */,
 				2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */,
 				25A6C56A2BFE66E700B22DD1 /* SceneDelegate.swift in Sources */,
 				25DA402C2C0344A400B7F59E /* EventSummaryViewController.swift in Sources */,
