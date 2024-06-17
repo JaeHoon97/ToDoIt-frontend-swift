@@ -86,8 +86,8 @@ extension EventSummaryViewController: SendScheduleData {
     func SendScheduleData(title: String) {
         eventSummaryView.personalSchedules.insert(Schedule(mainTitle: title), at: 0)
         eventSummaryView.snapshot = NSDiffableDataSourceSnapshot<Section, Schedule>()
-        eventSummaryView.snapshot.appendSections([.main])
-        eventSummaryView.snapshot.appendItems(eventSummaryView.personalSchedules, toSection: .main)
+        eventSummaryView.snapshot.appendSections([.schedule])
+        eventSummaryView.snapshot.appendItems(eventSummaryView.personalSchedules, toSection: .schedule)
         eventSummaryView.dataSource.apply(eventSummaryView.snapshot, animatingDifferences: true)
     }
 }

@@ -70,11 +70,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController() // 탭 바 컨트롤러
         
         // 각 화면에 맞는 뷰 컨트롤러를 생성한 후, 네비게이션 컨트롤러의 루트 뷰 컨트롤러로 지정한다
-        let homeViewController =  HomeViewController()
-        let schedulerViewController = ScheduleViewController()
-        let userInfoViewController = UserInfoViewController()
+        let homeViewController =  HomeViewController() // 투 두 뷰 컨트롤러
+        let schedulerViewController = ScheduleViewController() // 개인 일정 뷰 컨트롤러
+        let userInfoViewController = UserInfoViewController() // 사용자 정보 뷰 컨트롤러
         
-        tabBarController.setViewControllers([homeViewController, schedulerViewController, userInfoViewController], animated: false)
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = AppColors.shared.navigationBarAppearanceBackGroundColor
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColors.shared.mainBackGroundColor, NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 23)!]
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColors.shared.mainBackGroundColor, NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 15)!]
+        homeNavigationController.navigationBar.standardAppearance = appearance
+        homeNavigationController.navigationBar.scrollEdgeAppearance = appearance
+        homeNavigationController.navigationBar.compactAppearance = appearance
+        homeNavigationController.navigationBar.prefersLargeTitles = true
+        
+        tabBarController.setViewControllers([homeNavigationController, schedulerViewController, userInfoViewController], animated: false)
         tabBarController.modalPresentationStyle = .fullScreen // 화면을 풀스크린으로 변경
         tabBarController.tabBar.backgroundColor = AppColors.shared.tabBarBackGroundColor
         tabBarController.tabBar.tintColor = .black
@@ -85,8 +95,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let tabItems = tabBarController.tabBar.items else { return }
         
         tabItems[0].image = UIImage(named: "HomeIcon")
+        tabItems[0].title = "투두"
         tabItems[1].image = UIImage(named: "CalendarIcon")
-        tabItems[2].image = UIImage(named: "UserIcon")
+        tabItems[1].title = "일정"
+        tabItems[2].image = UIImage(systemName: "gearshape")
+        tabItems[2].title = "설정"
         
         window.rootViewController = tabBarController // 루트 뷰 컨트롤러를 메인 탭 바 컨트롤러로 변경
         
