@@ -25,7 +25,7 @@ final class EventSummaryView: UIView {
     // MARK: - 이벤트 날짜를 표시하는 레이블
     let eventDate: UILabel = {
         let lb = UILabel()
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 15)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 15)
         lb.textColor = .black
         lb.numberOfLines = 0
         lb.textAlignment = .left
@@ -38,7 +38,7 @@ final class EventSummaryView: UIView {
         let bt = UIButton(type: .custom)
         bt.setTitle("+ 일정을 생성하세요", for: .normal)
         bt.setTitleColor(.white, for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 13)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 10

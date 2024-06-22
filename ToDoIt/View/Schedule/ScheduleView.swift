@@ -11,53 +11,105 @@ import FSCalendar
 
 final class ScheduleView: UIView {
     
+    // MARK: - fsCalendar 달력
     let fsCalendarView: FSCalendar = {
-        let cv = FSCalendar()
+        let fsCal = FSCalendar()
         // MARK: - 기본 설정
-        cv.backgroundColor = .clear
-        cv.layer.cornerRadius = 20
-        cv.locale = Locale(identifier: "ko_KR") // 표시 언어를 한국어로
-        cv.scope = .month
-        cv.scrollEnabled = true
-        cv.scrollDirection = .horizontal
+        fsCal.backgroundColor = .clear
+        fsCal.layer.cornerRadius = 20
+        fsCal.locale = Locale(identifier: "ko_KR") // 표시 언어를 한국어로
+        fsCal.scope = .month // 월간 달력
+        fsCal.scrollEnabled = true // 스크롤 허용
+        fsCal.scrollDirection = .horizontal // 달력의 스크롤 방향을 수평으로
         // MARK: - 헤더 영역
-        cv.appearance.headerMinimumDissolvedAlpha = 0.0 // 헤더부분(최상단) 좌우측 날짜 제거
-        cv.appearance.headerDateFormat = "YYYY년 MM월"
-        cv.appearance.headerTitleColor = .black
-        cv.appearance.headerTitleOffset = .init(x: 10, y: 10)
-        cv.appearance.headerTitleAlignment = .center
-        cv.appearance.headerTitleFont = UIFont(name: FontManager.NanumGothicBold, size: 16) // 년도 YYYY년 MM의 폰트 설정
+        fsCal.headerHeight = 0 // 헤더 높이를 0으로 설정하여 헤더를 제거
         // MARK: - 요일 영역
-        cv.appearance.weekdayFont = UIFont(name: FontManager.NanumGothicBold, size: 12) // 요일 일~월의 폰트 설정
-        cv.appearance.weekdayTextColor = AppColors.shared.fsCalendarweekdayTextColor // 폰트 색상
+        fsCal.appearance.weekdayFont = UIFont(name: FontManager.Jalnan2, size: 12) // 요일 일~월의 폰트 설정
+        fsCal.appearance.weekdayTextColor = .black
         // MARK: - 숫자 영역(title)
-        cv.appearance.titleFont = UIFont(name: FontManager.NanumGothicBold, size: 11) // 숫자 1~31일 폰트 설정
-        cv.appearance.titleWeekendColor = AppColors.shared.fsCalendarTitleWeekendColor // 폰트 색상
+        fsCal.appearance.titleFont = UIFont(name: FontManager.Jalnan2, size: 11) // 숫자 1~31일 폰트 설정
+        fsCal.appearance.titleWeekendColor = AppColors.shared.fsCalendarTitleWeekendColor // 폰트 색상
         // MARK: - 투데이 영역
-        cv.today = nil // 오늘 날짜 원을 제거
+        fsCal.appearance.todayColor = .darkGray // 오늘
+        fsCal.appearance.todaySelectionColor = .systemGray
         // MARK: - 메모 영역(subtitle)
-        cv.appearance.subtitleFont = UIFont(name: FontManager.NanumGothicBold, size: 10)
-        // MARK: - 선택 기능
-//        cv.allowsMultipleSelection = true // 다중 선택 가능
-//        cv.swipeToChooseGesture.isEnabled = true // 스크롤 기능으로 여러개 선택 가능
-
-        return cv
+        fsCal.appearance.subtitleFont = UIFont(name: FontManager.Jalnan2, size: 10)
+        return fsCal
     }()
     
+    // MARK: - 달력과 이벤트를 구분하기 위한 뷰
+    private let divisionView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .lightGray
+        v.clipsToBounds = true
+        return v
+    }()
+    
+    // MARK: - 일/요일 표시 레이블
+    let dateLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = ""
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 16)
+        lb.textColor = .black
+        lb.clipsToBounds = true
+        lb.numberOfLines = 1
+        lb.textAlignment = .left
+        lb.backgroundColor = .clear
+        lb.frame.size = lb.intrinsicContentSize
+        return lb
+    }()
+    // MARK: - 음력 월/일 표시 레이블
+    let lunarDateLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = ""
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 12)
+        lb.textColor = .systemGray
+        lb.clipsToBounds = true
+        lb.numberOfLines = 1
+        lb.textAlignment = .left
+        lb.backgroundColor = .clear
+        lb.frame.size = lb.intrinsicContentSize
+        return lb
+    }()
+    
+    // MARK: - 네비게이션 왼쪽 바 버튼 날짜 표시 Label
+    let naviDateLabel: UILabel = {
+        let lb = UILabel()
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 18)
+        lb.textAlignment = .left
+        lb.textColor = .black
+        lb.numberOfLines = 1
+        lb.backgroundColor = .clear
+        lb.adjustsFontSizeToFitWidth = true
+        lb.frame.size = lb.intrinsicContentSize
+        return lb
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = AppColors.shared.mainBackGroundColor
         setupUI()
         setupLayout()
+        setLunarDateLabel()
+        setDateLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    // MARK: - 현재 날짜를 일/요일로 변환하고 dateLabel에 텍스트 설정
+    private func setDateLabel(){
+        dateLabel.text = DateManager.shared.getDayAndWeekDate(Date())
+    }
     
+    // MARK: - 음력 날짜를 구하고 lunarDateLabel에 텍스트 설정
+    private func setLunarDateLabel() {
+        lunarDateLabel.text = DateManager.shared.getLunarDate(Date())
+    }
     
     private func setupUI() {
-        [fsCalendarView].forEach {
+        self.backgroundColor = AppColors.shared.mainBackGroundColor
+        
+        [fsCalendarView, divisionView, dateLabel, lunarDateLabel].forEach {
             self.addSubview($0)
         }
         
@@ -67,9 +119,28 @@ final class ScheduleView: UIView {
         fsCalendarView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.leading.trailing.equalToSuperview().inset(10)
-            make.bottom.equalTo(self.snp.centerY).offset(300)
+            make.bottom.equalTo(self.snp.centerY).offset(30)
+        }
+        
+        divisionView.snp.makeConstraints { make in
+            make.top.equalTo(fsCalendarView.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1)
+        }
+        
+        dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(divisionView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+        }
+        
+        lunarDateLabel.snp.makeConstraints { make in
+            make.top.equalTo(dateLabel.snp.top)
+            make.leading.equalTo(dateLabel.snp.trailing).offset(10)
+            make.centerY.equalTo(dateLabel.snp.centerY)
+        }
+        
+        naviDateLabel.snp.makeConstraints { make in
+            make.width.equalTo(130)
         }
     }
-    
-    
 }

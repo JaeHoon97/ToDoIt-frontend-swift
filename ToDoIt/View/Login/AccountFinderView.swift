@@ -14,7 +14,7 @@ final class AccountFinderView: UIView {
     let emailFinderButton: UIButton = {
         let bt = UIButton(type: .custom)
         bt.setTitle("이메일 찾기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = .clear
         bt.setTitleColor(.black, for: .normal)
         bt.titleLabel?.textAlignment = .center
@@ -41,7 +41,7 @@ final class AccountFinderView: UIView {
     let pwFinderButton: UIButton = {
         let bt = UIButton(type: .custom)
         bt.setTitle("비밀번호 찾기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = .clear
         bt.setTitleColor(.black, for: .normal)
         bt.titleLabel?.textAlignment = .center

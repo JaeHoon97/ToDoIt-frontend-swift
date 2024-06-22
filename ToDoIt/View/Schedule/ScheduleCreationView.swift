@@ -22,7 +22,7 @@ final class ScheduleCreationView: UIView {
     let scheduleTitleTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "제목", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 19)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 19)
         tf.textColor = .black
         tf.backgroundColor = .clear
         tf.layer.borderColor = AppColors.shared.TextFieldBorderColor.cgColor
@@ -119,7 +119,7 @@ final class ScheduleCreationView: UIView {
     let allDayLabel: UILabel = {
         let lb = UILabel()
         lb.text = "하루 종일"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 16)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 16)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -146,7 +146,7 @@ final class ScheduleCreationView: UIView {
     let colorLabel: UILabel = {
         let lb = UILabel()
         lb.text = "색상"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 16)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 16)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -202,7 +202,7 @@ final class ScheduleCreationView: UIView {
     let memoTextView: UITextView = {
         let tv = UITextView()
         tv.text = "메모를 작성하세요"
-        tv.font = UIFont(name: FontManager.NanumGothic, size: 14)
+        tv.font = UIFont(name: FontManager.Jalnan2, size: 14)
         tv.textColor = .placeholderText
         tv.backgroundColor = .systemGray6
         tv.textContainerInset = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
@@ -215,7 +215,7 @@ final class ScheduleCreationView: UIView {
     let createScheduleButton: UIButton = {
         let bt = UIButton(type: .custom)
         bt.setTitle("생성하기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .white
