@@ -44,7 +44,7 @@ final class HomeView: UIView {
     private let toDoMessageLabel: UILabel = {
         let lb = UILabel()
         lb.text = "오늘의 ToDo를 달성해보세요!"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 14)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 14)
         lb.textColor = AppColors.shared.labelTextColor
         lb.numberOfLines = 1
         lb.textAlignment = .left
@@ -57,7 +57,7 @@ final class HomeView: UIView {
     private let toDoPercentLabel: UILabel = {
         let lb = UILabel()
         lb.text = "44%"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 20)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 20)
         lb.textColor = AppColors.shared.labelTextColor
         lb.numberOfLines = 0
         lb.textAlignment = .right
@@ -89,7 +89,7 @@ final class HomeView: UIView {
         let bt = UIButton(type: .custom)
         bt.setTitle("+ ToDo를 생성하세요", for: .normal)
         bt.setTitleColor(.white, for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 14)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 14)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 10

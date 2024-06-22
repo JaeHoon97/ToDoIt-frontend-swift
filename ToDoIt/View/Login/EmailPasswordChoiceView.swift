@@ -14,7 +14,7 @@ final class EmailPasswordChoiceView: UIView {
     var mainLabel: UILabel = {
         let lb = UILabel()
         lb.text = "닉네임"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -23,7 +23,7 @@ final class EmailPasswordChoiceView: UIView {
     var mainTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "닉네임을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -42,7 +42,7 @@ final class EmailPasswordChoiceView: UIView {
     private let tellLabel: UILabel = {
         let lb = UILabel()
         lb.text = "전화번호"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -51,7 +51,7 @@ final class EmailPasswordChoiceView: UIView {
     private let tellTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "전화번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -70,7 +70,7 @@ final class EmailPasswordChoiceView: UIView {
     var checkButton: UIButton = {
         let bt = UIButton(type: .custom)
         bt.setTitle("이메일 찾기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.titleLabel?.textColor = .white
         bt.clipsToBounds = false

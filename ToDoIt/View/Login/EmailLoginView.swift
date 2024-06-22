@@ -24,7 +24,7 @@ final class EmailLoginView: UIView {
     lazy var emailTextField: UITextField = { // 이메일 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -43,7 +43,7 @@ final class EmailLoginView: UIView {
     lazy var passwordTextField: UITextField = { // 비밀번호 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -62,7 +62,7 @@ final class EmailLoginView: UIView {
     private let warningMessageLabel: UILabel = { // 사용자의 입력에 오타가 발생했을 때 경고메시지를 전달하는 레이블
         let lb = UILabel()
         lb.text = "바르게 입력해주세요!"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 13)
         lb.textColor = .clear
         lb.clipsToBounds = true
         return lb
@@ -71,7 +71,7 @@ final class EmailLoginView: UIView {
     let loginButton: UIButton = { // 로그인 버튼
         let bt = UIButton(type: .custom)
         bt.setTitle("로그인", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.titleLabel?.textAlignment = .center
         bt.titleLabel?.textColor = .white
@@ -92,7 +92,7 @@ final class EmailLoginView: UIView {
     let accountFinderButton: UIButton = { // 계정 찾기 버튼
         let bt = UIButton(type: .custom)
         bt.setTitle("계정을 잃어버렸나요?", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 13)
         bt.backgroundColor = .clear
         bt.titleLabel?.textColor = .black
         bt.clipsToBounds = true
@@ -104,7 +104,7 @@ final class EmailLoginView: UIView {
     let signInButton: UIButton = { // 계정만들기 버튼
         let bt = UIButton(type: .custom)
         bt.setTitle("회원가입", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 13)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 13)
         bt.backgroundColor = .clear
         bt.titleLabel?.textColor = .black
         bt.clipsToBounds = true

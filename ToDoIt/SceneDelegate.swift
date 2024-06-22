@@ -71,25 +71,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // 각 화면에 맞는 뷰 컨트롤러를 생성한 후, 네비게이션 컨트롤러의 루트 뷰 컨트롤러로 지정한다
         let homeViewController =  HomeViewController() // 투 두 뷰 컨트롤러
-        let schedulerViewController = ScheduleViewController() // 개인 일정 뷰 컨트롤러
+        let scheduleViewController = ScheduleViewController() // 개인 일정 뷰 컨트롤러
         let userInfoViewController = UserInfoViewController() // 사용자 정보 뷰 컨트롤러
         
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = AppColors.shared.navigationBarAppearanceBackGroundColor
-        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColors.shared.mainBackGroundColor, NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 23)!]
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppColors.shared.mainBackGroundColor, NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 15)!]
-        homeNavigationController.navigationBar.standardAppearance = appearance
-        homeNavigationController.navigationBar.scrollEdgeAppearance = appearance
-        homeNavigationController.navigationBar.compactAppearance = appearance
+        let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController)
+        
+        let homeNaviAppearance = UINavigationBarAppearance()
+        homeNaviAppearance.backgroundColor = .white
+        
+        homeNaviAppearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: FontManager.Jalnan2, size: 23)!]
+        homeNaviAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: FontManager.Jalnan2, size: 15)!]
+        
+        homeNavigationController.navigationBar.standardAppearance = homeNaviAppearance
+        homeNavigationController.navigationBar.scrollEdgeAppearance = homeNaviAppearance
+        homeNavigationController.navigationBar.compactAppearance = homeNaviAppearance
         homeNavigationController.navigationBar.prefersLargeTitles = true
         
-        tabBarController.setViewControllers([homeNavigationController, schedulerViewController, userInfoViewController], animated: false)
+        
+        
+        tabBarController.setViewControllers([homeNavigationController, scheduleNavigationController, userInfoViewController], animated: false)
         tabBarController.modalPresentationStyle = .fullScreen // 화면을 풀스크린으로 변경
         tabBarController.tabBar.backgroundColor = AppColors.shared.tabBarBackGroundColor
         tabBarController.tabBar.tintColor = .black
         
-        let attributes = [NSAttributedString.Key.font: UIFont(name: FontManager.NanumGothicExtraBold, size: 10)]
+        let attributes = [NSAttributedString.Key.font: UIFont(name: FontManager.Jalnan2, size: 10)]
         UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
         
         guard let tabItems = tabBarController.tabBar.items else { return }

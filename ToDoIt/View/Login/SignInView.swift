@@ -14,7 +14,7 @@ final class SignInView: UIView {
     private let mainTitleLabel: UILabel = {
         let lb = UILabel()
         lb.text = "회원가입"
-        lb.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.textAlignment = .center
         lb.clipsToBounds = true
@@ -24,7 +24,7 @@ final class SignInView: UIView {
     private let emailLabel: UILabel = {
         let lb = UILabel()
         lb.text = "이메일"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -33,7 +33,7 @@ final class SignInView: UIView {
     private let emailTextField: UITextField = { // 이메일 입력 창
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -52,7 +52,7 @@ final class SignInView: UIView {
     private let nicknameLabel: UILabel = {
         let lb = UILabel()
         lb.text = "닉네임"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -61,7 +61,7 @@ final class SignInView: UIView {
     private let nicknameTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "닉네임을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -80,7 +80,7 @@ final class SignInView: UIView {
     private let tellLabel: UILabel = {
         let lb = UILabel()
         lb.text = "전화번호"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -89,7 +89,7 @@ final class SignInView: UIView {
     private let tellTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "전화번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -108,7 +108,7 @@ final class SignInView: UIView {
     private let passwordLabel: UILabel = {
         let lb = UILabel()
         lb.text = "비밀번호"
-        lb.font = UIFont(name: FontManager.NanumGothicBold, size: 17)
+        lb.font = UIFont(name: FontManager.Jalnan2, size: 17)
         lb.textColor = .black
         lb.clipsToBounds = true
         return lb
@@ -117,7 +117,7 @@ final class SignInView: UIView {
     private let passwordTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -135,7 +135,7 @@ final class SignInView: UIView {
     private let passwordCheckTextField: UITextField = {
         let tf = UITextField()
         tf.attributedPlaceholder = NSAttributedString(string: "비밀번호를 재입력해주세요", attributes: [NSAttributedString.Key.foregroundColor: AppColors.shared.TextFieldPlaceHolderColor])
-        tf.font = UIFont(name: FontManager.NanumGothicBold, size: 12)
+        tf.font = UIFont(name: FontManager.Jalnan2, size: 12)
         tf.textColor = .black
         tf.backgroundColor = AppColors.shared.TextFieldBackGroundColor
         tf.layer.cornerRadius = 12
@@ -155,7 +155,7 @@ final class SignInView: UIView {
     private let createButton: UIButton = { // 로그인 버튼
         let bt = UIButton(type: .custom)
         bt.setTitle("계정 생성하기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.backgroundColor = AppColors.shared.buttonBackGroundColor
         bt.titleLabel?.textColor = .white
         bt.clipsToBounds = false

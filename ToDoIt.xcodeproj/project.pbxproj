@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		250157F12BFF773B00EDE4ED /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250157F02BFF773B00EDE4ED /* SignInView.swift */; };
 		250157F32BFF7B3700EDE4ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250157F22BFF7B3700EDE4ED /* SignInViewController.swift */; };
+		2507EE8F2C2181FA00997516 /* Jalnan.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2507EE8E2C2181FA00997516 /* Jalnan.otf */; };
 		2518A84F2BFE820200B510A9 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A84E2BFE820200B510A9 /* FontManager.swift */; };
 		2518A8522BFE827600B510A9 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8512BFE827600B510A9 /* UIButtonExtension.swift */; };
 		2518A8552BFF262B00B510A9 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518A8542BFF262B00B510A9 /* AppColors.swift */; };
@@ -28,6 +29,7 @@
 		25A6C5712BFE66E800B22DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5702BFE66E800B22DD1 /* Assets.xcassets */; };
 		25A6C5742BFE66E800B22DD1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C5732BFE66E800B22DD1 /* Base */; };
 		25AA73C72C0DB7140045296D /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AA73C62C0DB7140045296D /* ToDoTableViewCell.swift */; };
+		25B695442C24C07A00004A15 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B695432C24C07A00004A15 /* DateManager.swift */; };
 		25DA401C2C02151900B7F59E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401B2C02151900B7F59E /* HomeViewController.swift */; };
 		25DA401E2C02153F00B7F59E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401D2C02153F00B7F59E /* HomeView.swift */; };
 		25DA40202C02156D00B7F59E /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA401F2C02156D00B7F59E /* ScheduleViewController.swift */; };
@@ -49,6 +51,7 @@
 /* Begin PBXFileReference section */
 		250157F02BFF773B00EDE4ED /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		250157F22BFF7B3700EDE4ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2507EE8E2C2181FA00997516 /* Jalnan.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jalnan.otf; sourceTree = "<group>"; };
 		2518A84E2BFE820200B510A9 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		2518A8512BFE827600B510A9 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		2518A8542BFF262B00B510A9 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		25A6C5732BFE66E800B22DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25A6C5752BFE66E800B22DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25AA73C62C0DB7140045296D /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		25B695432C24C07A00004A15 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		25DA401B2C02151900B7F59E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		25DA401D2C02153F00B7F59E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		25DA401F2C02156D00B7F59E /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2518A84E2BFE820200B510A9 /* FontManager.swift */,
+				25B695432C24C07A00004A15 /* DateManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				259E11C02C0668BC008A6A8B /* NanumGothic.otf */,
+				2507EE8E2C2181FA00997516 /* Jalnan.otf */,
 				25E4F4672BFE7F1800870129 /* NanumGothicBold.otf */,
 				25E4F4692BFE7F1E00870129 /* NanumGothicExtraBold.otf */,
 			);
@@ -375,6 +381,7 @@
 				25A6C5742BFE66E800B22DD1 /* Base in Resources */,
 				25E4F46A2BFE7F1E00870129 /* NanumGothicExtraBold.otf in Resources */,
 				259E11C12C0668BC008A6A8B /* NanumGothic.otf in Resources */,
+				2507EE8F2C2181FA00997516 /* Jalnan.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +456,7 @@
 				25DA40262C02160300B7F59E /* UserInfoView.swift in Sources */,
 				2534DA302BFFC7620015B289 /* AccountFinderViewController.swift in Sources */,
 				25DA402A2C03435400B7F59E /* EventSummaryView.swift in Sources */,
+				25B695442C24C07A00004A15 /* DateManager.swift in Sources */,
 				25DA40282C02217400B7F59E /* AppTexts.swift in Sources */,
 				25E4F4632BFE7DD100870129 /* EmailLoginView.swift in Sources */,
 				2534DA2E2BFFC3F20015B289 /* EmailPasswordChoiceView.swift in Sources */,

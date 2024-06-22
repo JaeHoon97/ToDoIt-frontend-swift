@@ -32,7 +32,7 @@ final class AuthSelectionView: UIView {
     let emailLoginButton: UIButton = {
         let bt = UIButton(type: .custom)
         bt.setTitle("이메일로 로그인하기", for: .normal)
-        bt.titleLabel?.font = UIFont(name: FontManager.NanumGothicExtraBold, size: 15)
+        bt.titleLabel?.font = UIFont(name: FontManager.Jalnan2, size: 15)
         bt.setTitleColor(.black, for: .normal)
         bt.backgroundColor = .clear
         bt.layer.cornerRadius = 10

@@ -121,6 +121,7 @@ final class ScheduleCreationViewController: UIViewController {
     // MARK: - 색상을 변경할 때 일정의 배경색상을 같은 색상으로 변경
     @objc func colorButtonTapped(_ sender: UIButton) {
         scheduleCreationView.colorView.backgroundColor = sender.backgroundColor
+        scheduleCreationView.createScheduleButton.backgroundColor = sender.backgroundColor
     }
     
     // MARK: - 키보드 내리기
@@ -151,8 +152,6 @@ extension ScheduleCreationViewController: UITextViewDelegate {
         let estimatedSize = textView.sizeThatFits(size)
         
         textView.constraints.forEach { (constraint) in
-        
-          /// 180 이하일때는 더 이상 줄어들지 않게하기
             if estimatedSize.height <= 100 {
             
             }
